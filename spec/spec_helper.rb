@@ -1,12 +1,12 @@
-require "active_record"
-require "benchmark"
-require_relative "../app/models/person"
+require 'active_record'
+require 'benchmark'
+require_relative '../app/models/person'
 
-PROJECT_ROOT = File.expand_path("../..", __FILE__)
+PROJECT_ROOT = File.expand_path(__FILE__)
 
 ActiveRecord::Base.establish_connection(
-  adapter:  "sqlite3",
-  database: File.join(PROJECT_ROOT, "test.db")
+  adapter: 'sqlite3',
+  database: File.join(PROJECT_ROOT, 'test.db')
 )
 
 class CreateSchema < ActiveRecord::Migration
